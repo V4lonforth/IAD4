@@ -29,10 +29,6 @@ public class AuthenticationController {
         this.userService = userService;
     }
 
-    private String hashPassword(String password) {
-        return Integer.toString(password.hashCode());
-    }
-
     private String validateUsername(String username) {
         int length = username.length();
         if (length <= MIN_USERNAME_LENGTH) {
